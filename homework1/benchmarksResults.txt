@@ -1,0 +1,76 @@
+goos: linux
+goarch: amd64
+pkg: homework1/internal/pkg/storage
+cpu: Intel(R) Core(TM) 5 120U
+
+BenchmarkInit
+BenchmarkInit/5
+BenchmarkInit/5-12  	1000000000	         0.0000918 ns/op
+BenchmarkInit/100
+BenchmarkInit/100-12         	1000000000	         0.0005437 ns/op
+BenchmarkInit/500
+BenchmarkInit/500-12         	1000000000	         0.001893 ns/op
+BenchmarkInit/2500
+BenchmarkInit/2500-12        	1000000000	         0.01073 ns/op
+BenchmarkInit/10000
+BenchmarkInit/10000-12       	1000000000	         0.03362 ns/op
+BenchmarkInit/100000
+BenchmarkInit/100000-12      	1000000000	         0.3376 ns/op
+BenchmarkInit/1000000
+BenchmarkInit/1000000-12     	       1	3454059709 ns/op
+PASS
+
+BenchmarkSG
+BenchmarkSG/5
+BenchmarkSG/5-12  	1000000000	         0.0000069 ns/op
+BenchmarkSG/100
+BenchmarkSG/100-12         	1000000000	         0.0000862 ns/op
+BenchmarkSG/500
+BenchmarkSG/500-12         	1000000000	         0.0004154 ns/op
+BenchmarkSG/2500
+BenchmarkSG/2500-12        	1000000000	         0.001286 ns/op
+BenchmarkSG/10000
+BenchmarkSG/10000-12       	1000000000	         0.007391 ns/op
+BenchmarkSG/100000
+BenchmarkSG/100000-12      	1000000000	         0.05337 ns/op
+BenchmarkSG/1000000
+BenchmarkSG/1000000-12     	  267706	      4073 ns/op
+PASS
+
+
+
+BenchmarkS
+BenchmarkS/5
+BenchmarkS/5-12  	1000000000	         0.0000064 ns/op
+BenchmarkS/100
+BenchmarkS/100-12         	1000000000	         0.0000648 ns/op
+BenchmarkS/500
+BenchmarkS/500-12         	1000000000	         0.0002387 ns/op
+BenchmarkS/2500
+BenchmarkS/2500-12        	1000000000	         0.0009920 ns/op
+BenchmarkS/10000
+BenchmarkS/10000-12       	1000000000	         0.005209 ns/op
+BenchmarkS/100000
+BenchmarkS/100000-12      	1000000000	         0.05491 ns/op
+BenchmarkS/1000000
+BenchmarkS/1000000-12     	1000000000	         0.8270 ns/op
+PASS
+
+
+
+BenchmarkGK
+BenchmarkGK/5
+BenchmarkGK/5-12  	1000000000	         0.0000005 ns/op
+BenchmarkGK/100
+BenchmarkGK/100-12         	1000000000	         0.0000011 ns/op
+BenchmarkGK/500
+BenchmarkGK/500-12         	1000000000	         0.0000043 ns/op
+BenchmarkGK/2500
+BenchmarkGK/2500-12        	1000000000	         0.0000204 ns/op
+BenchmarkGK/10000
+BenchmarkGK/10000-12       	1000000000	         0.0001324 ns/op
+BenchmarkGK/100000
+BenchmarkGK/100000-12      	1000000000	         0.002061 ns/op
+BenchmarkGK/1000000
+BenchmarkGK/1000000-12     	1000000000	         0.01006 ns/op
+PASS

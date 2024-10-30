@@ -1,13 +1,15 @@
 package storage
 
 import (
+	"errors"
 	"go.uber.org/zap"
 	"strconv"
 )
 
 type Storage struct {
-	storage map[string]Value
-	logger  *zap.Logger
+	storage     map[string]Value
+	listStorage map[string][]Value
+	logger      *zap.Logger
 }
 
 const (
@@ -29,8 +31,9 @@ func InitStorage() (Storage, error) {
 	defer logger.Sync()
 	//logger.Info("storage initialized")
 	return Storage{
-		storage: make(map[string]Value),
-		logger:  logger,
+		storage:     make(map[string]Value),
+		listStorage: make(map[string][]Value),
+		logger:      logger,
 	}, nil
 }
 
@@ -62,4 +65,11 @@ func (s *Storage) GetKind(key string) string {
 		return UnknownType
 	}
 	return out.kind
+}
+
+func (s *Storage) LPUSH(key string, els ...string) error {
+	if els == nil || len(els) == 0 {
+		return errors.New("els is empty")
+	}
+	
 }
